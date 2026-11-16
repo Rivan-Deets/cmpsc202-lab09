@@ -168,3 +168,29 @@ Merge sort, which sorts an array by dividing it into two halves, recursively sor
 
 
 2. How do the algorithms you analyzed in this lab compare to the ones we discussed in lecture? Specifically, each algorithm differs from the two we discussed in lecture in one important way. For each of the algorithms above, what is that difference? 
+Algorithm 1: Mystery
+Mystery is similar to merge sort because it divides the input recursively and performs linear work during the combine step. However, unlike merge sort, it divides the input into unequal parts:
+
+[
+\frac n3 \quad\text{and}\quad \frac{2n}{3}
+]
+
+instead of two equal halves.
+
+It also makes two recursive calls, unlike binary search, which makes only one recursive call.
+
+Algorithm 2: The Algorithm from Exercise 2
+The recurrence
+
+[
+T(n)\leq 3T(n/2)+cn^2
+]
+
+describes an algorithm that makes three recursive calls, whereas merge sort makes two recursive calls and binary search makes one.
+
+It also performs quadratic work, (cn^2), at each node. This is more combine work than merge sort, which typically performs linear work, (cn), during its merge step.
+
+So the main differences are:
+
+Mystery: unequal recursive subproblem sizes.
+Exercise 2 algorithm: three recursive calls and quadratic combine work instead of fewer recursive calls and linear combine work.
